@@ -35,7 +35,7 @@ header h3 {
     margin-top: 0px;
     margin-bottom: 30px;
     text-align: left;
-    font-size: 20px;
+    font-size: 50px;
     color: darkgray;
 }
 
@@ -74,6 +74,7 @@ header img {
 
 .hamburger-menu button .fa-bars {
     cursor: pointer;
+    font-size: 2.5em;
 }
 
 .close-menu {
@@ -274,8 +275,17 @@ footer a {
 }
 
 .im12 {
-    grid-column: 8 / 13;
+    grid-column: 1/7;
     grid-row: 10 / 12;
+}
+
+.story-left {
+    text-align: left;
+    grid-column: 1/7;
+}
+
+.story-right {
+    grid-column: 7/13;
 }
 
 /* article figure div {
@@ -289,17 +299,19 @@ footer a {
 } */
 
 
-/*This is for cellphones*/
+/*Pour cell seulement*/
 
 @media (max-width: 1024px) {
 
     .hamburger-menu {
         display: flex;
+        /*show the hamburger button*/
         align-items: center;
     }
 
     .menu1 {
         display: none;
+        /*hide the regular menu links*/
         position: fixed;
         top: 0;
         left: 0;
@@ -334,7 +346,7 @@ footer a {
     }
 
     .menu-deployed {
-        display: flex;
+        display: flex !important;
         flex-direction: center;
         justify-content: center;
         align-items: center;
@@ -367,8 +379,8 @@ footer a {
         align-items: center;
         /*vertically align*/
         flex-wrap: wrap;
-        border-bottom: 4px solid #FFCD00;
-        background: #C8102E;
+        border-bottom: 4px solid #e26abe;
+        background: #0000004c;
         z-index: 1000;
         color: white;
     }
@@ -399,7 +411,7 @@ footer a {
     }
 
     header h1 {
-        font-size: 50px;
+        font-size: 100px;
     }
 
     body {
