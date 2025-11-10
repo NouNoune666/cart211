@@ -13,60 +13,81 @@
     /* how wide content can stretch */
     margin: 0 auto;
     /* centers the wrapper */
-    border: 10px solid #222;
+    border: 10px solid #D55E0F;
     border-radius: 20px;
-    background: #4ae0d86c;
+    background: #0687e48e;
 }
 
 
 /*==Navigation==*/
 nav {
-    background: #4ae0d8;
+    display: flex;
+    /*makes it horizontal*/
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    /*for smaller screens*/
+    background: #0687e48e;
     padding: 10px;
-    border: 10px solid #222;
+    border: 10px solid #D55E0F;
     border-radius: 20px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin: 30px;
     /* font-family: "Zalando Sans Expanded", sans-serif;*/
+    transition: border-color 0.6s, background-color 0.6s ease, transform 0.6s ease;
+}
+
+nav:hover {
+    border-color: #fbbb0ddb;
+    background-color: #75AE2A;
+    transform: scale(1.1);
 }
 
 /*nav and dropdown title, avoids repeating twice*/
 nav a,
 .dropdown-title {
-    /*why written like this*/
     color: #000000;
     text-decoration: none;
     display: inline-block;
     margin: 6px 0;
-    transition: 0.3s;
+    padding: 6px 10px;
     /* font-family: "Zalando Sans Expanded", sans-serif; */
+    border-radius: 10px;
+    transition: color 0.6s ease, border-color 0.6s, transform 0.6s ease;
 }
 
 /* Hover for nav links and dropdown */
 nav a:hover,
 .dropdown-title:hover {
-    color: #ff61ef;
-    text-shadow: 0 0 10px #ff61ef;
+    color: #D55E0F;
+    border-color: #fbbb0ddb;
+    background-color: #75AE2A;
+    transform: rotate(-5deg) scale(1.1);
+    text-decoration: underline dotted #D55E0F;
 }
 
 /*Dropdown .dropdown-content will be positioned relative to this parent,
 not the page. */
 .dropdown {
     position: relative;
-    display: inline-block;
-    /*What is this for*/
 }
 
 .dropdown-content {
-    padding-left: 50px;
+    padding: 5px;
     display: none;
+    top: 100%;
+    /*This is to make sure it opens below title*/
     position: absolute;
-    background: #e6a3ce;
-    border: 1px solid #333;
-    z-index: 1;
+    background: #0687e48e;
+    border: 1px solid #D55E0F;
+    border-radius: 20px;
+    z-index: 10;
     /* make sure it layers above other stuff, not really needed right now */
+}
+
+.dropdown-content a:hover {
+    color: #D55E0F;
+    text-decoration: underline dotted #D55E0F;
 }
 
 /*Dropdown hover*/
@@ -81,24 +102,25 @@ not the page. */
 .content-section {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 20px;
     align-items: center;
     justify-content: space-around;
     margin: 40px 30px;
-
 }
 
 .content-section .text {
     flex: 1;
-    background: #4ae0d8;
-    border: 10px solid #222;
+    background: #0E8DE5;
+    border: 10px solid #D66317;
     border-radius: 20px;
     padding: 20px;
-    transition: border-color 0.6s;
+    transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
 }
 
 .content-section .text:hover {
-    border-color: #ff61ef;
+    border-color: #fbbb0ddb;
+    background-color: #75AE2A;
+    transform: scale(1.1);
 }
 
 .content-section .image {
@@ -109,15 +131,16 @@ not the page. */
 .content-section .image img {
     width: 90%;
     max-width: 600px;
-    border: 8px solid #86efac;
+    border: 8px solid #D66317;
     border-radius: 20px;
-    box-shadow: 0 0 15px rgba(134, 239, 172, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease;
+    background: #0E8DE5;
 }
 
 .content-section .image img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 25px rgba(255, 97, 239, 0.5);
+    transform: scale(1.1);
+    border-color: #fbbb0ddb;
+    background-color: #75AE2A;
 }
 
 
@@ -127,10 +150,9 @@ not the page. */
 
 
 /*====ABOUT PAGE====*/
-
 #about-page {
     color: #000000;
-    line-height: 1.6;
+    line-height: 2;
     padding: 20px;
     background: url("assets/background.png");
     background-size: cover;
@@ -140,27 +162,37 @@ not the page. */
 
 /*==Header==*/
 #about-page header {
-    text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#about-page header:hover {
+    transform: scale(1.1);
 }
 
 #about-page header h1 {
+    line-height: 0.7;
+    text-align: left;
     font-size: 10rem;
     color: #86efac;
-    text-shadow: 5px 5px #000000;
+    text-shadow: 10px 20px #000000;
     /* offset-x | offset-y | blur-radius | color */
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #about-page header h2 {
+    line-height: 0.7;
+    text-align: right;
     font-size: 5rem;
     color: #86efac;
-    text-shadow: 5px 5px #000000;
+    text-shadow: 10px 15px #000000;
     /* offset-x | offset-y | blur-radius | color */
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #about-page header img {
@@ -172,9 +204,7 @@ not the page. */
 
 /*==Main article==*/
 #about-page main article {
-    background: #4ae0d8;
     padding: 10px;
-    border: 10px solid #222;
     border-radius: 20px;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -185,9 +215,6 @@ not the page. */
     /*whats this*/
 }
 
-#about-page main article:hover {
-    border-color: #ff61ef;
-}
 
 
 
@@ -198,7 +225,7 @@ not the page. */
 
 #what-is-page {
     color: #000000;
-    line-height: 1.6;
+    line-height: 2;
     padding: 20px;
     background: url("assets/background.png");
     background-size: cover;
@@ -208,20 +235,26 @@ not the page. */
 
 /*==Header==*/
 #what-is-page header {
-    text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#what-is-page header:hover {
+    transform: scale(1.1);
 }
 
 #what-is-page header h1 {
-    font-size: 10rem;
-    text-align: center;
+    line-height: 1;
+    text-align: left;
+    font-size: 8rem;
     color: #86efac;
-    text-shadow: 5px 5px #000000;
+    text-shadow: 10px 20px #000000;
     /* offset-x | offset-y | blur-radius | color */
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #what-is-page header img {
@@ -229,27 +262,19 @@ not the page. */
     width: 100%;
     border: 10px solid #86efac;
     border-radius: 20px;
-    margin: auto;
 }
 
 /*==Main text==*/
 #what-is-page main .text {
-    background: #4ae0d8;
     padding: 10px;
-    border: 10px solid #222;
     border-radius: 20px;
     margin-bottom: 30px;
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
     /* font-family: "Zalando Sans Expanded", sans-serif; */
-    transition: 1.3s;
-    /*whats this*/
 }
 
-#what-is-page main .text:hover {
-    border-color: #ff61ef;
-}
 
 
 
@@ -261,7 +286,7 @@ not the page. */
 
 #how-to-protect-yourself-page {
     color: #000000;
-    line-height: 1.6;
+    line-height: 2;
     padding: 20px;
     background: url("assets/background.png");
     background-size: cover;
@@ -271,27 +296,37 @@ not the page. */
 
 /*==Header==*/
 #how-to-protect-yourself-page header {
-    text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#how-to-protect-yourself-page header:hover {
+    transform: scale(1.1);
 }
 
 #how-to-protect-yourself-page header h1 {
-    font-size: 10rem;
+    line-height: 1;
+    text-align: left;
+    font-size: 7rem;
     color: #86efac;
-    text-shadow: 5px 5px #000000;
+    text-shadow: 10px 20px #000000;
     /* offset-x | offset-y | blur-radius | color */
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #how-to-protect-yourself-page header h2 {
+    line-height: 1;
+    text-align: right;
     font-size: 5rem;
     color: #86efac;
-    text-shadow: 5px 5px #000000;
+    text-shadow: 10px 20px #000000;
     /* offset-x | offset-y | blur-radius | color */
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 #how-to-protect-yourself-page header img {
@@ -303,22 +338,15 @@ not the page. */
 
 /*==Main article==*/
 #how-to-protect-yourself-page main article {
-    background: #4ae0d8;
     padding: 10px;
-    border: 10px solid #222;
     border-radius: 20px;
     margin-bottom: 30px;
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
     /* font-family: "Zalando Sans Expanded", sans-serif; */
-    transition: 1.3s;
-    /*whats this*/
 }
 
-#how-to-protect-yourself-page article:hover {
-    border-color: #ff61ef;
-}
 
 
 
@@ -329,7 +357,7 @@ not the page. */
 /*====WHO AM I====*/
 #who-am-i-page {
     color: #000000;
-    line-height: 1.6;
+    line-height: 2;
     padding: 20px;
     background: url("assets/background.png");
     background-size: cover;
@@ -339,28 +367,38 @@ not the page. */
 
 /*==Header==*/
 #who-am-i-page header {
-    text-align: center;
     margin-bottom: 30px;
     margin-top: 30px;
     margin-left: 30px;
     margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#who-am-i-page header:hover {
+    transform: scale(1.1);
 }
 
 #who-am-i-page h1 {
-    font-size: 10rem;
+    line-height: 0.7;
     text-align: center;
+    font-size: 10rem;
     color: #86efac;
-    text-shadow: 5px 5px #000000;
+    text-shadow: 10px 20px #000000;
     /* offset-x | offset-y | blur-radius | color */
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
+#who-am-i-page header img {
+    max-width: 600px;
+    width: 100%;
+    border: 10px solid #86efac;
+    border-radius: 20px;
+}
 
 /*==Main text==*/
 #who-am-i-page main .text {
-    background: #4ae0d8;
     padding: 10px;
-    border: 10px solid #222;
     border-radius: 20px;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -371,58 +409,15 @@ not the page. */
     /*whats this*/
 }
 
-#who-am-i-page main .text:hover {
-    border-color: #ff61ef;
-}
 
-/*Specific content section for the who am I page (text and image), no zoom in effect*/
-
-.who-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: center;
-    justify-content: space-around;
-    margin: 40px 30px;
-}
-
-.who-section .text {
-    flex: 1;
-    background: #4ae0d8;
-    border: 10px solid #222;
-    border-radius: 20px;
-    padding: 20px;
-    transition: border-color 0.6s;
-}
-
-.who-section .text:hover {
-    border-color: #ff61ef;
-}
-
-.who-section .image {
-    flex: 1;
-    text-align: center;
-}
-
-.who-section .image img {
-    width: 90%;
-    max-width: 600px;
-    border: 8px solid #86efac;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(134, 239, 172, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.who-section .image img:hover {
-    box-shadow: 0 0 25px rgba(255, 97, 239, 0.5);
-}
 
 /*Image gallery of baby Brigi*/
 
 #gallery {
-    margin: 60px auto;
+    margin: 50px auto;
     text-align: center;
     max-width: 1200px;
+    padding: 20px;
 }
 
 #gallery h3 {
@@ -435,29 +430,43 @@ not the page. */
 /* Two rows of images */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
-    justify-items: normal;
+    justify-items: center;
 }
+
+.gallery-grid figure {
+    background: #0689E4;
+    border: 8px solid #71AB23;
+    border-radius: 20px;
+    padding: 10px;
+    transition: transform 0.6s ease, background-color 0.6s ease, border-color 0.6s ease;
+}
+
+.gallery-grid figure:hover {
+    transform: scale(2.05);
+    border-color: #fbbb0ddb;
+    background-color: #D55E0F;
+}
+
 
 /* Each image */
 .gallery-grid img {
     width: 100%;
-    max-width: 250px;
-    height: 300px;
-    object-fit: fill;
-    border: 6px solid #a02d95;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    height: 370px;
+    object-fit: cover;
 }
 
-/* Hover zoom animation */
-.gallery-grid img:hover {
-    transform: scale(2.05);
-    box-shadow: 0 0 20px rgba(255, 97, 239, 0.5);
+.gallery-grid figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #000;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 5px 8px;
+    font-style: italic;
 }
-
-
 
 
 
@@ -466,9 +475,9 @@ not the page. */
 /*==EXAMPLES GRID==*/
 #examples {
     text-align: center;
-    background: #4ae0d8;
+    background: #0689E4;
     padding: 10px;
-    border: 10px solid #222;
+    border: 10px solid #D55E0F;
     border-radius: 20px;
     margin-bottom: 30px;
     margin-top: 30px;
@@ -476,19 +485,27 @@ not the page. */
     margin-right: 30px;
 }
 
+#examples:hover {
+    border-color: #FBB905;
+    transition: 1.6s;
+    background-color: #71AB23;
+}
+
 #examples h2 {
     margin-bottom: 30px;
     margin-top: 30px;
     background: #4ae0d8;
     padding: 10px;
-    border: 8px solid #222;
+    border: 8px solid #D55E0F;
     border-radius: 20px;
 }
 
-#examples:hover {
-    border-color: #ff61ef;
-    transition: 1.3s;
+#examples h2:hover {
+    border-color: #FBB905;
+    transition: 1.6s;
+    background-color: #71AB23;
 }
+
 
 /*The grid of examples*/
 .examples-container {
@@ -501,20 +518,19 @@ not the page. */
 
 /*Each example*/
 .example {
-    background: #58c7a9;
-    border: 8px solid #a02d95;
+    background: #0689E4;
+    border: 8px solid #D55E0F;
     border-radius: 20px;
     padding: 10px;
-    transition: 0.3s;
+    transition: 0.6s;
     /*for smoother hovering*/
 }
 
 .example:hover {
-    border-color: #86efac;
-    box-shadow: 0 0 15px rgba(134, 239, 172, 0.4);
-    transform: translateY(-5px) scale(1.03);
-    transition: transform 0.2s ease, box-shadow 0.3s;
-    /*cool little movement effect on hover*/
+    border-color: #FBB905;
+    transition: 1.6s;
+    background-color: #71AB23;
+    transform: scale(1.1);
 }
 
 .example img {
@@ -528,7 +544,8 @@ not the page. */
 .example p {
     margin-top: 10px;
     font-family: Verdana, sans-serif;
-    border: 2px solid #a02d95;
+    border: 2px solid #D55E0F;
+    ;
     border-radius: 20px;
     font-size: 1rem;
     color: #000000;
