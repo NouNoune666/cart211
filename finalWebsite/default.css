@@ -1,4 +1,6 @@
-/*Custom Fonts*/
+/*===CUSTOM FONTS===*/
+
+/*General website fonts*/
 @font-face {
     font-family: nintendoFont;
     /* set name */
@@ -41,6 +43,102 @@
     /* url of the font */
 }
 
+/*Yahoo page font*/
+@font-face {
+    font-family: yahooFont;
+    /* set name */
+    src: url(assets/fonts/yahoo.otf);
+    /* url of the font */
+}
+
+/*Equifax page fonts*/
+@font-face {
+    font-family: equifaxFont1;
+    /* set name */
+    src: url(assets/fonts/UniversNextProBold.ttf);
+    /* url of the font */
+}
+
+@font-face {
+    font-family: equifaxFont2;
+    /* set name */
+    src: url(assets/fonts/UniversNextProRegular.ttf);
+    /* url of the font */
+}
+
+/*Facebook page fonts*/
+@font-face {
+    font-family: facebookFont1;
+    /* set name */
+    src: url(assets/fonts/FacebookSansItalic.ttf);
+    /* url of the font */
+}
+
+@font-face {
+    font-family: facebookFont2;
+    /* set name */
+    src: url(assets/fonts/FacebookSansRegular.ttf);
+    /* url of the font */
+}
+
+/*LinkedIn page fonts*/
+@font-face {
+    font-family: linkedInFont1;
+    /* set name */
+    src: url(assets/fonts/SourceSansPro-Semibold.ttf);
+    /* url of the font */
+}
+
+@font-face {
+    font-family: linkedInFont2;
+    /* set name */
+    src: url(assets/fonts/SourceSansPro-Italic.ttf);
+    /* url of the font */
+}
+
+@font-face {
+    font-family: linkedInFont3;
+    /* set name */
+    src: url(assets/fonts/SourceSansPro-Regular.ttf);
+    /* url of the font */
+}
+
+/*Desjardins page fonts*/
+@font-face {
+    font-family: desjardinsFont1;
+    /* set name */
+    src: url(assets/fonts/OPTIMA_B.TTF);
+    /* url of the font */
+}
+
+@font-face {
+    font-family: desjardinsFont2;
+    /* set name */
+    src: url(assets/fonts/Optima_Italic.ttf);
+    /* url of the font */
+}
+
+@font-face {
+    font-family: desjardinsFont3;
+    /* set name */
+    src: url(assets/fonts/Frutiger.ttf);
+    /* url of the font */
+}
+
+/*Capital One page fonts*/
+@font-face {
+    font-family: capitalOneFont1;
+    /* set name */
+    src: url(assets/fonts/Frutiger\ Italic.ttf);
+    /* url of the font */
+}
+
+@font-face {
+    font-family: capitalOneFont2;
+    /* set name */
+    src: url(assets/fonts/MinionPro-Regular.otf);
+    /* url of the font */
+}
 
 
 /* This affects everything on the page and resets all default spacing to zero so that we start from scratch, unless I override it */
@@ -129,8 +227,9 @@ not the page. */
     background: #0687e4;
     border: 1px solid #D55E0F;
     border-radius: 20px;
-    z-index: 10;
+    z-index: 100;
     /* make sure it layers above other stuff, not really needed right now */
+
 }
 
 .dropdown-content a:hover {
@@ -142,6 +241,7 @@ not the page. */
 /*Dropdown hover*/
 .dropdown:hover .dropdown-content {
     display: block;
+
 }
 
 
@@ -160,11 +260,13 @@ not the page. */
 .content-section .text {
     flex: 1;
     font-family: "startStoryFont", sans-serif;
+    font-size: 22px;
     background: #0E8DE5;
     border: 10px solid #D66317;
     border-radius: 20px;
     padding: 20px;
     transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
+    text-align: justify;
 }
 
 .content-section .text:hover {
@@ -490,6 +592,617 @@ not the page. */
 
 
 
+
+
+/*====YAHOO PAGE====*/
+#yahoo-page {
+    color: #000000;
+    line-height: 2;
+    padding: 20px;
+    background: url("assets/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*==Header==*/
+#yahoo-page header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#yahoo-page header:hover {
+    transform: scale(1.1);
+}
+
+
+#yahoo-page header h1 {
+    font-family: "yahooFont", sans-serif !important;
+    line-height: 0.7;
+    text-align: left;
+    font-size: 10rem;
+    color: #6000D3 !important;
+    text-shadow: 10px 20px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#yahoo-page header h2 {
+    font-family: "yahooFont", sans-serif !important;
+    line-height: 0.7;
+    text-align: right;
+    font-size: 5rem;
+    color: #6000D3;
+    text-shadow: 10px 15px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: "jgsFont", sans-serif;
+
+}
+
+#yahoo-page .content-section .image img {
+    border-color: #000000db;
+}
+
+#yahoo-page .content-section .image img:hover {
+    transform: scale(1.05);
+    border-color: #000000db !important;
+    background-color: #6000D3;
+}
+
+#yahoo-page .content-section .text {
+    font-family: "yahooFont", sans-serif !important;
+    border-color: #000000db;
+}
+
+#yahoo-page .content-section .text:hover {
+    transform: scale(1.05);
+    border-color: #000000db !important;
+    background-color: #6000D3;
+}
+
+
+#yahoo-page .textBottom {
+    font-family: "yahooFont", sans-serif !important;
+    text-align: center;
+    margin: 40px 30px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
+    background: #0E8DE5;
+    font-size: 20px;
+
+}
+
+#yahoo-page .textBottom:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #6000D3;
+}
+
+#yahoo-page #wrapper {
+    background: #f4f3f0;
+}
+
+
+
+
+
+
+
+/*====EQUIFAX PAGE====*/
+#equifax-page {
+    color: #000000;
+    line-height: 2;
+    padding: 20px;
+    background: url("assets/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*==Header==*/
+#equifax-page header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#equifax-page header:hover {
+    transform: scale(1.1);
+}
+
+#equifax-page header h1 {
+    font-family: "equifaxFont1", sans-serif !important;
+    line-height: 0.7;
+    text-align: left;
+    font-size: 10rem;
+    color: #B4203F !important;
+    text-shadow: 10px 20px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#equifax-page header h2 {
+    font-family: "equifaxFont2", sans-serif !important;
+    line-height: 0.7;
+    text-align: right;
+    font-size: 5rem;
+    color: #B4203F;
+    text-shadow: 10px 15px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: "jgsFont", sans-serif;
+
+}
+
+#equifax-page .content-section .image img {
+    border-color: #000000db;
+}
+
+#equifax-page .content-section .image img:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #B4203F;
+}
+
+#equifax-page .content-section .text {
+    font-family: "equifaxFont2", sans-serif !important;
+    border-color: #000000db;
+}
+
+#equifax-page .content-section .text:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #B4203F;
+}
+
+
+#equifax-page .textBottom {
+    font-family: "equifaxFont2", sans-serif !important;
+    text-align: center;
+    margin: 40px 30px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
+    background: #0E8DE5;
+    font-size: 20px;
+
+}
+
+#equifax-page .textBottom:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #B4203F;
+}
+
+#equifax-page #wrapper {
+    background: #333e48;
+}
+
+
+
+
+
+
+
+
+/*====FACEBOOK PAGE====*/
+#facebook-page {
+    color: #000000;
+    line-height: 2;
+    padding: 20px;
+    background: url("assets/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*==Header==*/
+#facebook-page header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#facebook-page header:hover {
+    transform: scale(1.1);
+}
+
+#facebook-page header h1 {
+    font-family: "facebookFont1", sans-serif !important;
+    line-height: 0.7;
+    text-align: left;
+    font-size: 10rem;
+    color: #1877F2 !important;
+    text-shadow: 10px 20px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#facebook-page header h2 {
+    font-family: "facebookFont2", sans-serif !important;
+    line-height: 0.7;
+    text-align: right;
+    font-size: 5rem;
+    color: #1877F2;
+    text-shadow: 10px 15px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+#facebook-page .content-section .image img {
+    border-color: #000000db;
+}
+
+#facebook-page .content-section .image img:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #1877F2;
+}
+
+#facebook-page .content-section .text {
+    font-family: "facebookFont2", sans-serif !important;
+    border-color: #000000db;
+}
+
+#facebook-page .content-section .text:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #1877F2;
+}
+
+
+#facebook-page .textBottom {
+    font-family: "facebookFont2", sans-serif !important;
+    text-align: center;
+    margin: 40px 30px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
+    background: #0E8DE5;
+    font-size: 20px;
+
+}
+
+#facebook-page .textBottom:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #1877F2;
+}
+
+#facebook-page #wrapper {
+    background: #8b9dc3;
+}
+
+
+
+
+
+
+
+/*====LINKEDIN PAGE====*/
+#linkedIn-page {
+    color: #000000;
+    line-height: 2;
+    padding: 20px;
+    background: url("assets/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*==Header==*/
+#linkedIn-page header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#linkedIn-page header:hover {
+    transform: scale(1.1);
+}
+
+#linkedIn-page header h1 {
+    font-family: "linkedInFont1", sans-serif !important;
+    line-height: 0.7;
+    text-align: left;
+    font-size: 10rem;
+    color: #0077B5 !important;
+    text-shadow: 10px 20px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#linkedIn-page header h2 {
+    font-family: "linkedInFont2", sans-serif !important;
+    line-height: 0.7;
+    text-align: right;
+    font-size: 5rem;
+    color: #0077B5;
+    text-shadow: 10px 15px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+#linkedIn-page .content-section .image img {
+    border-color: #000000db;
+}
+
+#linkedIn-page .content-section .image img:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #0077B5;
+}
+
+#linkedIn-page .content-section .text {
+    font-family: "linkedInFont3", sans-serif !important;
+    border-color: #000000db;
+}
+
+#linkedIn-page .content-section .text:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #0077B5;
+}
+
+
+#linkedIn-page .textBottom {
+    font-family: "linkedInFont3", sans-serif !important;
+    text-align: center;
+    margin: 40px 30px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
+    background: #0E8DE5;
+    font-size: 20px;
+
+}
+
+#linkedIn-page .textBottom:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #0077B5;
+}
+
+#linkedIn-page #wrapper {
+    background: #ffffff;
+}
+
+
+
+
+
+
+
+
+/*====DESJARDINS PAGE====*/
+#desjardins-page {
+    color: #000000;
+    line-height: 2;
+    padding: 20px;
+    background: url("assets/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*==Header==*/
+#desjardins-page header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#desjardins-page header:hover {
+    transform: scale(1.1);
+}
+
+#desjardins-page header h1 {
+    font-family: "desjardinsFont1", sans-serif !important;
+    line-height: 0.7;
+    text-align: left;
+    font-size: 10rem;
+    color: #00874E !important;
+    text-shadow: 10px 20px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#desjardins-page header h2 {
+    font-family: "desjardinsFont2", sans-serif !important;
+    line-height: 0.7;
+    text-align: right;
+    font-size: 5rem;
+    color: #00874E;
+    text-shadow: 10px 15px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+#desjardins-page .content-section .image img {
+    border-color: #000000db;
+}
+
+#desjardins-page .content-section .image img:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #00874E;
+}
+
+#desjardins-page .content-section .text {
+    font-family: "desjardinsFont3", sans-serif !important;
+    border-color: #000000db;
+}
+
+#desjardins-page .content-section .text:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #00874E;
+}
+
+
+#desjardins-page .textBottom {
+    font-family: "desjardinsFont3", sans-serif !important;
+    text-align: center;
+    margin: 40px 30px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
+    background: #0E8DE5;
+    font-size: 20px;
+
+}
+
+#desjardins-page .textBottom:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #00874E;
+}
+
+#desjardins-page #wrapper {
+    background: #E6E7E8;
+}
+
+
+
+
+
+
+
+
+
+/*====CAPITAL ONE PAGE====*/
+#capitalOne-page {
+    color: #000000;
+    line-height: 2;
+    padding: 20px;
+    background: url("assets/background.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*==Header==*/
+#capitalOne-page header {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    transition: transform 0.6s ease;
+}
+
+#capitalOne-page header:hover {
+    transform: scale(1.1);
+}
+
+#capitalOne-page header h1 {
+    font-family: "capitalOneFont1", sans-serif !important;
+    line-height: 0.7;
+    text-align: left;
+    font-size: 10rem;
+    color: #CC2427 !important;
+    text-shadow: 10px 20px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#capitalOne-page header h2 {
+    font-family: "capitalOneFont1", sans-serif !important;
+    line-height: 0.7;
+    text-align: right;
+    font-size: 5rem;
+    color: #CC2427;
+    text-shadow: 10px 15px #000000;
+    /* offset-x | offset-y | blur-radius | color */
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+#capitalOne-page .content-section .image img {
+    border-color: #000000db;
+}
+
+#capitalOne-page .content-section .image img:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #CC2427;
+}
+
+#capitalOne-page .content-section .text {
+    font-family: "capitalFont2", sans-serif !important;
+    border-color: #000000db;
+}
+
+#capitalOne-page .content-section .text:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #CC2427;
+}
+
+
+#capitalOne-page .textBottom {
+    font-family: "capitalFont2", sans-serif !important;
+    text-align: center;
+    margin: 40px 30px;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    transition: border-color 0.6s ease, background-color 0.6s ease, transform 0.6s ease;
+    background: #0E8DE5;
+    font-size: 20px;
+
+}
+
+#capitalOne-page .textBottom:hover {
+    transform: scale(1.05);
+    border-color: #000000db;
+    background-color: #CC2427;
+}
+
+#capitalOne-page #wrapper {
+    background: #013D5B;
+}
+
+
+
+
+
+
+
+
+
 /*Image gallery of baby Brigi*/
 
 #gallery {
@@ -505,6 +1218,11 @@ not the page. */
     color: #86efac;
     text-shadow: 3px 3px #000;
     margin-bottom: 30px;
+    transition: transform 0.6s ease;
+}
+
+#gallery h3:hover {
+    transform: scale(1.5);
 }
 
 /* Two rows of images */
@@ -524,7 +1242,7 @@ not the page. */
 }
 
 .gallery-grid figure:hover {
-    transform: scale(2.05);
+    transform: scale(1.5);
     border-color: #fbbb0ddb;
     background-color: #D55E0F;
 }
@@ -619,7 +1337,7 @@ not the page. */
 .example img {
     width: 90%;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 6px;
 }
 
@@ -641,6 +1359,6 @@ footer {
     margin-right: 50px;
     margin-bottom: 30px;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.3rem;
     color: #000000;
 }
